@@ -1,6 +1,6 @@
 # Budget-App
 
-Link: https://albprog.github.io/Book-Store/
+Link: https://albprog.github.io/Budget-App/
 
 Budget app application. I created this web application on June 2020.
 
