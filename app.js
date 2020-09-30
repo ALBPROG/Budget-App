@@ -38,7 +38,7 @@ var budgetController = (function() {
         data.totals[type] = sum;
     };
     
-    
+    // Data Structure. Expense, Income
     var data = {
         allItems: {
             exp: [],
@@ -168,6 +168,10 @@ var budgetController = (function() {
 // UI CONTROLLER
 var UIController = (function() {
     
+    /* 
+    Created a DOM_Strings object.
+    I did this because if we want to change the class of inputValue than instead of changing the class everywhere in the code, we just need to change it here.
+    */
     var DOMstrings = {
         inputType: '.add__type',
         inputDescription: '.add__description',
@@ -347,7 +351,7 @@ var UIController = (function() {
 
 // GLOBAL APP CONTROLLER
 var controller = (function(budgetCtrl, UICtrl) {
-    
+    // function that sets up all our event listeners
     var setupEventListeners = function() {
         var DOM = UICtrl.getDOMstrings();
         
@@ -390,7 +394,7 @@ var controller = (function(budgetCtrl, UICtrl) {
         UICtrl.displayPercentages(percentages);
     };
     
-    
+    // function that gets called when we add a new item
     var ctrlAddItem = function() {
         var input, newItem;
         
